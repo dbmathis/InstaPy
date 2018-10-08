@@ -293,7 +293,8 @@ class InstaPy:
             chrome_options.add_argument("--mute-audio")
             chrome_options.add_argument('--dns-prefetch-disable')
             chrome_options.add_argument('--lang=en-US')
-            chrome_options.add_argument('--disable-setuid-sandbox')
+            # Will not run with headless false in CentOS with this enabled
+            # chrome_options.add_argument('--disable-setuid-sandbox')
 
             # this option implements Chrome Headless, a new (late 2017)
             # GUI-less browser. chromedriver 2.9 and above required
